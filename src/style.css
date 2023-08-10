@@ -1,0 +1,78 @@
+html body {
+  margin: 0;
+  padding: 0;
+  font-size: large;
+}
+
+canvas {
+  margin: 0.5rem;
+  border: 2px solid black;
+}
+
+div#control {
+  width: 50%;
+  height: auto;
+  border: 2px solid black;
+  border-radius: 0.5rem;
+  padding: 0.3rem;
+  margin: 0.5rem;
+}
+div#control form#row-column-input {
+  margin: 1rem;
+}
+div#control form#row-column-input div {
+  display: flex;
+}
+div#control form#row-column-input div label {
+  width: 5rem;
+}
+div#control div#generate-grid-wrapper {
+  width: auto;
+  margin: 0;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+}
+div#control div#generate-grid-wrapper button {
+  width: 8rem;
+  height: 2rem;
+  text-align: center;
+  font-size: large;
+}
+div#control div#draw-mode-wrapper form#draw-mode {
+  margin: 1rem;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+div#control div#draw-mode-wrapper form#draw-mode input {
+  width: 6rem;
+  height: 2rem;
+  text-align: center;
+  margin: auto;
+  font-size: large;
+}
+div#control div#draw-mode-wrapper p {
+  display: flex;
+  justify-content: center;
+}
+div#control div#pathfind {
+  display: flex;
+}
+div#control div#pathfind button {
+  width: 6rem;
+  height: 2rem;
+  text-align: center;
+  margin: auto;
+  font-size: large;
+}
+div#control div#path-result {
+  display: flex;
+  justify-content: center;
+  margin: 1rem;
+}
+
+/*# sourceMappingURL=style.css.map */

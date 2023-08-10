@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+
+        <title>Grid Pathfinding</title>
+    </head>
+    <body>
+        <canvas class="canvas-grid"></canvas>
+        <div id="control">
+            <form id="row-column-input">
+                <div>
+                    <label for="rows">Rows </label>
+                    <input
+                        type="range"
+                        name="rows"
+                        id="rows"
+                        min="2"
+                        max="20"
+                        value="10"
+                        oninput="document.querySelector('#rowValueLabel').value = this.value;"
+                    />
+                </div>
+                <div>
+                    <label for="columns">Columns </label>
+                    <input
+                        type="range"
+                        name="columns"
+                        id="columns"
+                        min="2"
+                        max="20"
+                        value="10"
+                        oninput="document.querySelector('#colValueLabel').value = this.value;"
+                    />
+                </div>
+            </form>
+
+            <div id="generate-grid-wrapper">
+                <p id="p-rows">
+                    Rows:
+                    <output for="rows" id="rowValueLabel" style="font-style: normal"></output>
+                </p>
+                <p id="p-cols">
+                    Columns:
+                    <output for="columns" id="colValueLabel" style="font-style: normal"></output>
+                </p>
+                <button id="generate-grid" type="button">Generate Grid</button>
+            </div>
+
+            <div id="draw-mode-wrapper">
+                <form id="draw-mode">
+                    <input type="button" id="wall-button" value="Wall 🚧" />
+                    <input type="button" id="start-button" value="Start 🚩" />
+                    <input type="button" id="goal-button" value="Goal ⭐" />
+                    <input type="button" id="erase-button" value="Erase 🧼" />
+                    <input type="button" id="reset-button" value="Reset ⚡" />
+                </form>
+                <p>
+                    Current Drawmode :
+                    <output id="draw-mode-label"></output>
+                </p>
+            </div>
+            <div id="pathfind">
+                <button id="BFS-button" type="button">BFS!</button>
+                <button id="GBFS-button" type="button">GBFS!</button>
+                <button id="ASTAR-button" type="button">A*!</button>
+            </div>
+            <div id="path-result"></div>
+        </div>
+    </body>
+    <script src="main.js"></script>
+</html>
